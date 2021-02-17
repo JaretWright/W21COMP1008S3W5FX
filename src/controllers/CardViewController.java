@@ -3,6 +3,7 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import models.*;
 
 import java.net.URL;
@@ -18,6 +19,9 @@ public class CardViewController implements Initializable {
 
     @FXML
     private Label faceValueLabel;
+
+    @FXML
+    private ImageView imageView;
 
     private DeckOfCards deckOfCards;
 
@@ -36,5 +40,6 @@ public class CardViewController implements Initializable {
         faceNameLabel.setText(card.getFaceName());
         suitLabel.setText(card.getSuit());
         faceValueLabel.setText(Integer.toString(card.getFaceValue()));
+        imageView.setImage(card.getCardImage());
     }
 }

@@ -35,7 +35,6 @@ public class Card {
     private void setCardImage()
     {
         String filePath = String.format("images/%s_of_%s.png",faceName,suit);
-        System.out.println(filePath);
         cardImage = new Image(filePath);
     }
 

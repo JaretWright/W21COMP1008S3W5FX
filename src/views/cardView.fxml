@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -50,5 +51,6 @@
          </children>
       </GridPane>
       <Button layoutX="255.0" layoutY="265.0" mnemonicParsing="false" onAction="#getNextCard" text="Get Next Card" />
+      <ImageView fx:id="imageView" fitHeight="377.0" fitWidth="224.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
