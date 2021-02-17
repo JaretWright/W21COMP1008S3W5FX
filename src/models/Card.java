@@ -1,5 +1,7 @@
 package models;
 
+import javafx.scene.image.Image;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,6 +10,7 @@ public class Card {
     //attributes that we want to model in the class.
     private String faceName, suit;
     private int faceValue;
+    private Image cardImage;
 
     /**
      * The goal of the constructor is to allocate memory for the
@@ -22,6 +25,22 @@ public class Card {
         setFaceName(face);
         setSuit(suit);
         setFaceValue(faceValue);  //valid values 2 -> 14
+        setCardImage();
+    }
+
+    /**
+     * This method will use the face name and suit to establish the correct
+     * image to load
+     */
+    private void setCardImage()
+    {
+        String filePath = String.format("images/%s_of_%s.png",faceName,suit);
+        System.out.println(filePath);
+        cardImage = new Image(filePath);
+    }
+
+    public Image getCardImage() {
+        return cardImage;
     }
 
     public String getFaceName() {
@@ -33,8 +52,8 @@ public class Card {
      */
     public static List<String> getFaceNames()
     {
-        return Arrays.asList("two","three","four","five","six","seven","eight",
-                "nine","ten","jack","queen","king","ace");
+        return Arrays.asList("2","3","4","5","6","7","8",
+                "9","10","jack","queen","king","ace");
     }
 
     /**

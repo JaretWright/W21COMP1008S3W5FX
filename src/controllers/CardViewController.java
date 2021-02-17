@@ -24,6 +24,14 @@ public class CardViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         deckOfCards = new DeckOfCards();
+        //add 1 line of code here to randomize the card order
+        deckOfCards.shuffle();
+        getNextCard();
+    }
+
+    @FXML
+    private void getNextCard()
+    {
         Card card = deckOfCards.dealTopCard();
         faceNameLabel.setText(card.getFaceName());
         suitLabel.setText(card.getSuit());

@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardViewController">
    <children>
       <GridPane layoutX="241.0" layoutY="155.0">
@@ -50,5 +49,6 @@
             </Label>
          </children>
       </GridPane>
+      <Button layoutX="255.0" layoutY="265.0" mnemonicParsing="false" onAction="#getNextCard" text="Get Next Card" />
    </children>
 </AnchorPane>
